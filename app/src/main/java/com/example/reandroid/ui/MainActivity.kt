@@ -3,15 +3,25 @@ package com.example.reandroid.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.reandroid.R
+import com.example.reandroid.databinding.ActivityMainBinding
+import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        Timber.d("foo")
+        binding.btnFoo.setOnClickListener {
+            Timber.d("foo")
+            println("bar")
+        }
+
     }
 }
