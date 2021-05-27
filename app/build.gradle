@@ -47,6 +47,9 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary true
+        }
     }
     /**
      * The buildTypes block is where you can configure multiple build types.
@@ -88,10 +91,17 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+        useIR = true
     }
     buildFeatures {
         viewBinding true
+        compose true
     }
+    composeOptions {
+        kotlinCompilerExtensionVersion versions.compose
+        kotlinCompilerVersion '1.4.32'
+    }
+
 }
 
 dependencies {
@@ -101,6 +111,7 @@ dependencies {
 
     // hilt
     implementation deps.hilt.core
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
     kapt deps.hilt.compiler
 
     implementation deps.coroutines
@@ -137,14 +148,16 @@ dependencies {
     implementation deps.retrofit.converterGson
 
     // compose
-    implementation deps.compose.runtime
     implementation deps.compose.ui
-    implementation deps.compose.foundationLayout
     implementation deps.compose.material
     implementation deps.compose.materialIcons
+    implementation deps.compose.materialIconsExtened
     implementation deps.compose.foundation
     implementation deps.compose.uiTooling
     implementation deps.compose.activityCompose
+    implementation deps.compose.viewModel
+    implementation deps.compose.liveData
+    androidTestImplementation deps.compose.test
 
 
     // test
