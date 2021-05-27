@@ -76,6 +76,10 @@ ext.versions = [
         "okhttp3"          : '4.9.1',
         "retrofit"         : '2.9.0',
 
+        // compose
+        "compose"          : '1.0.0-beta07',
+        "composeUI"        : '1.3.0-alpha08'
+
 
 ]
 
@@ -118,14 +122,25 @@ ext.deps = [
 
         ],
         // network
-        "okhttp3":[
-          "loggingInterceptor": "com.squareup.okhttp3:logging-interceptor:${versions.okhttp3}"
+        "okhttp3"         : [
+                "loggingInterceptor": "com.squareup.okhttp3:logging-interceptor:${versions.okhttp3}"
         ],
         "retrofit"        : [
                 "core"            : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
                 "converterScalars": "com.squareup.retrofit2:converter-scalars:${versions.retrofit}",
                 "converterGson"   : "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
 
+        ],
+        "compose"         : [
+                "runtime"         : "androidx.compose.runtime:runtime:${versions.compose}",
+                "ui"              : "androidx.compose.ui:ui:${versions.compose}",
+                "foundationLayout": "androidx.compose.foundation:foundation-layout:${versions.compose}",
+                "material"        : "androidx.compose.material:material:${versions.compose}",
+                "materialIcons"   : "androidx.compose.material:material-icons-extended:${versions.compose}",
+                "foundation"      : "androidx.compose.foundation:foundation:${versions.compose}",
+                "uiTooling"       : "androidx.compose.ui:ui-tooling:${versions.compose}",
+
+                "activityCompose" : "androidx.activity:activity-compose:${versions.compose}",
         ]
 
 
