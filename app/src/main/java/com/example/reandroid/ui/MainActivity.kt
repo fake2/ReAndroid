@@ -5,10 +5,8 @@ import android.os.Bundle
 import com.example.reandroid.R
 import com.example.reandroid.databinding.ActivityMainBinding
 import com.google.gson.Gson
-import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
-@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
