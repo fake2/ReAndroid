@@ -36,7 +36,7 @@ buildscript {
      */
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.0.0-rc01'
+        classpath 'com.android.tools.build:gradle:7.0.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
@@ -59,7 +59,7 @@ ext.versions = [
 
 
         // support library
-        "appCompat"        : '1.3.0',
+        "appCompat"        : '1.3.1',
         "fragment"         : '1.3.6',
         "recyclerView"     : '1.2.1',
         "cardView"         : '1.0.0',
@@ -78,10 +78,10 @@ ext.versions = [
         "retrofit"         : '2.9.0',
 
         // compose
-        "compose"          : '1.0.0-rc02',
-        "composeActivity"  : '1.3.0-rc02',
+        "compose"          : '1.0.0',
+        "composeActivity"  : '1.3.0',
         "composeViewModel" : '1.0.0-alpha07',
-        "composeLiveData"  : '1.0.0-rc02',
+        "composeLiveData"  : '1.0.0',
 
 
 ]
@@ -132,7 +132,6 @@ ext.deps = [
                 "core"            : "com.squareup.retrofit2:retrofit:${versions.retrofit}",
                 "converterScalars": "com.squareup.retrofit2:converter-scalars:${versions.retrofit}",
                 "converterGson"   : "com.squareup.retrofit2:converter-gson:${versions.retrofit}",
-
         ],
         "compose"         : [
                 "ui"                  : "androidx.compose.ui:ui:${versions.compose}",
